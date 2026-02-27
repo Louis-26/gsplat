@@ -10,7 +10,7 @@ Work:
 # Finished Work
 
 ## 1. setup gsplat package✅
-The environment configuration and installation steps are documented [here](https://github.com/Louis-26/gsplat/blob/main/work.md). The demo is also included in the document, which can be run after the environment setup and dataset preparation.
+The environment configuration and installation steps are documented [here](https://github.com/Louis-26/gsplat/blob/main/env_config.md). The demo is also included in the document, which can be run after the environment setup and dataset preparation.
 
 
 ## find and render thermal/RGB image pair datasets⏳
