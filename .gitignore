@@ -126,5 +126,10 @@ results
 
 !examples/benchmarks/compression/results/
 
-/git_script/
+# IDE
 /.idea/
+
+# complementary
+/gsplat/cuda/csrc/third_party/
+/git_script/
+
