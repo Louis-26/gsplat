@@ -1,7 +1,0 @@
-Running garden
-Warning: image_path not found for reconstruction
-[Parser] 185 images, taken by 1 cameras.
-Downscaling images by 4x from data/360_v2/garden/images to data/360_v2/garden/images_4_png.
-[Parser] No valid EXIF exposure data found in any image.
-Scene scale: 1.2265263065808911
-Model initialized. Number of GS: 138766

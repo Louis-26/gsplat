@@ -133,3 +133,5 @@ results
 /gsplat/cuda/csrc/third_party/
 /git_script/
 
+# RGB/thermal paired dataset
+/RGB-T-dataset/

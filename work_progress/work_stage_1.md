@@ -10,20 +10,13 @@ Work:
 # Finished Work
 
 ## 1. setup gsplat package✅
-The environment configuration and installation steps are documented [here](https://github.com/Louis-26/gsplat/blob/main/env_config.md). The demo is also included in the document, which can be run after the environment setup and dataset preparation.
+The environment configuration and installation steps are documented [here](https://github.com/Louis-26/gsplat/blob/main/env_config.md). The benchmark experiment has been executed successfully, and the results are documented [here](https://github.com/Louis-26/gsplat/blob/main/evaluation_result.md)
 
 
-## find and render thermal/RGB image pair datasets⏳
 
-### Reference Paper
-- ThermalGaussian(ICLR 2025)
-- NTR-Gaussian(CVPR 2025)
+## 2. find thermal/RGB image pair datasets⏳
+Additional datasets information is documented [here](https://github.com/Louis-26/gsplat/blob/main/additional_dataset.md)
 
 
-### Dataset
-- ThermoNeRF
-- RGBT-Scenes
-
-
-### Rendering Result
+## Rendering Result
 

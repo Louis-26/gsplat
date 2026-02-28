@@ -1,0 +1,137 @@
+# evaluation metric
+
+## PSNR
+Peak Signal-to-Noise Ratio(for RGB image)
+
+input: Rendered image $K$, Ground truth image $I$, $K, I \in R^{m \times n \times 3}$
+
+$MSE = \frac{1}{3mn} \sum_{i=1}^{m} \sum_{j=1}^{n} \sum_{k=1}^{3} (K_{i,j,k} - I_{i,j,k})^2$
+
+$PSNR = 10 \log_{10} \left( \frac{MAX(I)^2}{MSE} \right)$
+
+range: $[0, \infty)$
+
+units: decibels (dB)
+
+## SSIM
+Structural similarity index measure
+input: Rendered image $K$, Ground truth image $I$, $K, I \in R^{m \times n \times 3}$
+
+$SSIM(K, I) = [l(K, I)]^\alpha \cdot [c(K, I)]^\beta \cdot [s(K, I)]^\gamma$
+
+$l(K, I)$: luminance comparison function 
+$c(K, I)$: contrast comparison function
+$s(K, I)$: structure comparison function
+$\alpha$, $\beta$, and $\gamma$ are hyperparameters controling the relative importance
+
+$l(K, I) = \frac{2\mu_K \mu_I + C_1}{\mu_K^2 + \mu_I^2 + C_1}$
+
+$c(K, I) = \frac{2\sigma_K \sigma_I + C_2}{\sigma_K^2 + \sigma_I^2 + C_2}$
+
+$s(K, I) = \frac{\sigma_{KI} + C_3}{\sigma_K \sigma_I + C_3}$
+with $\sigma_{KI,a}=\frac{1}{MN} \sum_{i=1}^{MN} (I'_i-\bar{I})(J'_i-\bar{J})$, $a \in \{R,G,B\}$
+
+$sigma_{KI}=\frac{1}{3} \sum_{a \in \{R,G,B\}} \sigma_{KI,a}$
+
+range: $[0, 1]$
+## LPIPS
+Learned Perceptual Image Patch Similarity
+
+It computes the similarity between the activations of two image patches for some pre-defined network.
+
+input: Rendered image $x$, Ground truth image $x_0$, $K, I \in R^{m \times n \times 3}$
+
+$
+d(x, x_0) =
+\sum\limits_l \frac{1}{H_l W_l}
+\sum\limits_{h,w}
+\left\|
+w_l \left(\hat{y}_{l,hw} - \hat{y}_{0l,hw}\right)
+\right\|_2^2
+$
+
+reference: https://arxiv.org/pdf/1801.03924
+
+
+# 3DGS rendering results
+copy rendering results:
+```bash
+cd $(git rev-parse --show-toplevel)
+python tests/copy_videos.py
+```
+## bicycle
+
+| Iteration | Memory Usage | Elapsed Time | Num. Gaussians | PSNR (↑) | SSIM (↑) | LPIPS (↓) |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **7k** | **5.332 GB** | **685.78 s** | 3,625,286 | 24.05 | 0.683 | 0.298 |
+| **30k** | 8.793 GB | 5207.62 s | 5,988,673 | **25.63** | **0.775** | **0.157** |
+
+
+<video src="https://github.com/Louis-26/gsplat/raw/main/examples/results/benchmark/bicycle/videos/traj_6999.mp4" width="600" controls></video>
+
+
+- [rendering at Step 6999](examples/results/benchmark/bicycle/videos/traj_6999.mp4)
+- [rendering at Step 29999](examples/results/benchmark/bicycle/videos/traj_29999.mp4)
+
+## bonsai
+
+| Iteration | Memory Usage | Elapsed Time | Num. Gaussians | PSNR (↑) | SSIM (↑) | LPIPS (↓) |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **7k** | **1.958 GB** | **712.41 s** | 1,158,969 | 29.77 | 0.928 | 0.145 |
+| **30k** | 1.985 GB | 3066.51 s | 1,221,311 | **32.18** | **0.947** | **0.115** |
+
+- [rendering at Step 6999](examples/results/benchmark/bonsai/videos/traj_6999.mp4)
+- [rendering at Step 29999](examples/results/benchmark/bonsai/videos/traj_29999.mp4)
+
+## counter
+
+| Iteration | Memory Usage | Elapsed Time | Num. Gaussians | PSNR (↑) | SSIM (↑) | LPIPS (↓) |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **7k** | **1.668 GB** | **711.76 s** | 1,012,959 | 27.35 | 0.887 | 0.191 |
+| **30k** | 1.885 GB | 3085.83 s | 1,190,088 | **29.15** | **0.915** | **0.141** |
+
+- [rendering at Step 6999](examples/results/benchmark/counter/videos/traj_6999.mp4)
+- [rendering at Step 29999](examples/results/benchmark/counter/videos/traj_29999.mp4)
+
+## garden
+
+| Iteration | Memory Usage | Elapsed Time | Num. Gaussians | PSNR (↑) | SSIM (↑) | LPIPS (↓) |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **7k** | **5.839 GB** | **800.13 s** | 3,961,902 | 26.61 | 0.838 | 0.118 |
+| **30k** | 7.300 GB | 4902.52 s | 4,957,842 | **27.73** | **0.871** | **0.072** |
+
+- [rendering at Step 6999](examples/results/benchmark/garden/videos/traj_6999.mp4)
+- [rendering at Step 29999](examples/results/benchmark/garden/videos/traj_29999.mp4)
+
+## kitchen
+
+| Iteration | Memory Usage | Elapsed Time | Num. Gaussians | PSNR (↑) | SSIM (↑) | LPIPS (↓) |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **7k** | **2.523 GB** | **749.29 s** | 1,646,560 | 29.17 | 0.909 | 0.115 |
+| **30k** | 2.735 GB | 3337.75 s | 1,784,928 | **31.24** | **0.932** | **0.085** |
+
+- [rendering at Step 6999](examples/results/benchmark/kitchen/videos/traj_6999.mp4)
+- [rendering at Step 29999](examples/results/benchmark/kitchen/videos/traj_29999.mp4)
+
+## room
+
+| Iteration | Memory Usage | Elapsed Time | Num. Gaussians | PSNR (↑) | SSIM (↑) | LPIPS (↓) |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **7k** | **1.811 GB** | **700.14 s** | 1,115,143 | 29.55 | 0.903 | 0.199 |
+| **30k** | 2.376 GB | 3142.96 s | 1,570,913 | **31.65** | **0.927** | **0.150** |
+
+- [rendering at Step 6999](examples/results/benchmark/room/videos/traj_6999.mp4)
+- [rendering at Step 29999](examples/results/benchmark/room/videos/traj_29999.mp4)
+
+## stump
+
+| Iteration | Memory Usage | Elapsed Time | Num. Gaussians | PSNR (↑) | SSIM (↑) | LPIPS (↓) |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **7k** | **5.193 GB** | **694.95 s** | 3,533,922 | 25.98 | 0.738 | 0.235 |
+| **30k** | 6.614 GB | 4153.15 s | 4,507,212 | **26.90** | **0.783** | **0.144** |
+
+- [rendering at Step 6999](examples/results/benchmark/stump/videos/traj_6999.mp4)
+- [rendering at Step 29999](examples/results/benchmark/stump/videos/traj_29999.mp4)
+
+# time elasped 
+time duration for demo benchmark training: around 6 hours
