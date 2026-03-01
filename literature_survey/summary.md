@@ -20,29 +20,55 @@ https://arxiv.org/pdf/2503.22060
 https://dl.acm.org/doi/pdf/10.1145/3757377.3763938
 
 ## dataset
-1. RGBT-Scenes dataset, handheld thermal camera, many views, very few (14) scenes.
+1. RGBT-Scenes
+https://arxiv.org/pdf/2409.07200
+
+accessibility: publicly available✅
+
+2. VT5000 dataset, handheld thermal camera, many views, very few (14) scenes.
+
 https://arxiv.org/pdf/2007.03262
 
+accessibility: publicly available✅
+
 2. NTR dataset, considered convective heat transfer
+
 https://github.com/NPU-CVPG/NTR-Gaussian
 
+accessibility: publicly available✅
+
 3. TI-NSD dataset
+
 https://arxiv.org/pdf/2409.08042
 
+accessibility: publicly available✅
+
 4. ThermoNeRF dataset: Thermonerf: Multimodal neural radiance fields for thermal novel view synthesis
+
 https://arxiv.org/pdf/2403.12154
 
+accessibility: not publicly available❌
+
 5. RGBT-LOW dataset: Focus on low-light situations. RGBT-LOW dataset contain 20 scenes with 6000 images.
+
 https://arxiv.org/abs/2406.14482
+
+accessibility: publicly available✅
 
 6. Multi-spectral dataset: W. Dai, Y. Zhang, S. Chen, D. Sun, and D. Kong, 
 A multi-spectral dataset for evaluating motion estimation systems, in Proc. IEEE Int. Conf. Robot. Autom. (ICRA), 
 May 2021, pp. 5560–5566.
+
 https://arxiv.org/pdf/2007.00622
+
 http://github.com/NGCLAB/multi-spectral-dataset
+
+accessibility: publicly available✅
 
 7. ViVID++ dataset: A. J. Lee, Y. Cho, Y.-S. Shin, A. Kim, and H. Myung, 
 ViViD++: Vision for visibility dataset, IEEE Robot. Autom. Lett., vol. 7, no. 3, pp. 6282–6289, Jul. 2022
 https://dl.acm.org/doi/pdf/10.1145/3737905.3769282 might be worth reading a bit more.
+
 https://arxiv.org/pdf/2204.06183
 
+accessibility: publicly available✅

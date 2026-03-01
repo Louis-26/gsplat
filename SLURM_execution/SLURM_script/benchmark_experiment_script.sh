@@ -8,7 +8,7 @@
 #SBATCH --mail-type=all
 #SBATCH --mail-user=ylu174@alumni.jhu.edu
 #SBATCH --output=../SLURM_output/%x_%j.out            # Stdout file (%x=job name, %j=job ID)
-#SBATCH --error=../SLURM_output/%x_%j.err             # Stderr file
+#SBATCH --error=../SLURM_outcome/%x_%j.err             # Stderr file
 
 
 RECORD_FILE="time_record_${SLURM_JOB_ID}.txt"
@@ -19,7 +19,7 @@ conda activate gsplat
 
 
 # record start time
-cd "$(git rev-parse --show-toplevel)/SLURM_execution/SLURM_output"
+cd "$(git rev-parse --show-toplevel)/SLURM_execution/SLURM_outcome"
 START_TS=$(date +%s)
 start_time=$(python -c "import time; print(time.time())")
 
@@ -38,7 +38,7 @@ bash benchmarks/basic.sh
 # sleep 5
 
 # record end time and duration
-cd "$(git rev-parse --show-toplevel)/SLURM_execution/SLURM_output"
+cd "$(git rev-parse --show-toplevel)/SLURM_execution/SLURM_outcome"
 END_TS=$(date +%s)
 DURATION=$(( END_TS - START_TS ))
 

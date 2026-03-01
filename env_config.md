@@ -6,6 +6,11 @@ python version | environment | GPU |  pytorch version | cuda version | Operating
 3.10 | conda | NVIDIA GPU Quadro RTX 6000 | 2.0.0 | 11.8 | Linux 
 
 ## configuration step
+open interactive mode in HPC
+```bash
+srun -p brtx-pod --gres=gpu:1 --time=02:00:00 --pty bash 
+```
+
 step 1: create conda environment and activate
 ```bash
 conda create -n gsplat python=3.10 -y
