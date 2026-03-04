@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=RGBT_Scenes_experiment
-#SBATCH --partition=ba100
+#SBATCH --partition=ba100,brtx6,brtx6-ir,brtx-pod
 #SBATCH --gpus=1
 #SBATCH --nodes=1
 #SBATCH --ntasks=1

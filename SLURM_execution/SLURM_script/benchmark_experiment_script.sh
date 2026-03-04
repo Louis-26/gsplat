@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=benchmark_demo
-#SBATCH --partition=brtx6
+#SBATCH --partition=brtx6,ba100,brtx6,brtx6-ir,brtx-pod
 #SBATCH --gpus=1
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
@@ -35,6 +35,8 @@ EOF
 # train the benchmark model
 cd "$(git rev-parse --show-toplevel)/examples"
 bash benchmarks/basic.sh
+bash benchmarks/RGB-thermal/RGBT-Scenes_rgb_3DGS.sh
+bash benchmarks/RGB-thermal/RGBT-Scenes_thermal_3DGS.sh
 # sleep 5
 
 # record end time and duration

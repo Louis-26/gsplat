@@ -1,11 +1,13 @@
 SCENE_DIR="data/RGBT-Scenes"
-RESULT_DIR="results/RGBT-Scenes/thermal"
-# SCENE_LIST="Building DailyStuff Dimsum Ebike IronIngot LandScape Parterre RoadBlock RotaryKiln Truck"
-SCENE_LIST="LandScape"
+# RESULT_DIR="results/RGBT-Scenes/thermal"
+RESULT_DIR="results_60k/RGBT-Scenes/thermal"
+SCENE_LIST="Building DailyStuff Dimsum Ebike IronIngot LandScape Parterre RoadBlock RotaryKiln Truck"
+# SCENE_LIST="LandScape"
 RENDER_TRAJ_PATH="ellipse"
 
 for SCENE in $SCENE_LIST;
 do
+	mkdir -p $RESULT_DIR/$SCENE
     DATA_FACTOR=1
     echo "Running $SCENE"
 
@@ -14,7 +16,9 @@ do
         --render_traj_path $RENDER_TRAJ_PATH \
         --data_dir $SCENE_DIR/$SCENE/ \
         --result_dir $RESULT_DIR/$SCENE/ \
-		--image_type thermal
+		--image_type thermal \
+		--max_steps 60000 \
+		--save_ply
 
     # run eval and render
     for CKPT in $RESULT_DIR/$SCENE/ckpts/*;
@@ -24,7 +28,8 @@ do
             --data_dir $SCENE_DIR/$SCENE/ \
             --result_dir $RESULT_DIR/$SCENE/ \
             --ckpt $CKPT \
-			--image_type thermal
+			--image_type thermal \
+			--save_ply
     done
 done
 
