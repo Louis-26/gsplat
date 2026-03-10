@@ -27,7 +27,7 @@ As RGB-Scenes dataset is the only one with both RGB and thermal images, with mul
 
 Detailed rendering procedure is documented [here](../RGB-T-3DGS/RGBT-Scenes/RGB-T-render.md).
 
-Meanwhile, the execution details are here, the rendering result is [here](../RGB-T-3DGS/RGBT-Scenes/evaluation_result.md).
+Meanwhile, the execution details and rendering result are [here](../RGB-T-3DGS/RGBT-Scenes/evaluation_result.md).
 
 ## 4. get .ply files for visualization✅
 For visualization purpose, .ply files are generated given .pt, by the [tool_script](../tools/export_ply.py), output to `../examples/results/benchmark/$Scene/ply`

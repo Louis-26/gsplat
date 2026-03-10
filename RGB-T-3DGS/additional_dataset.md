@@ -32,7 +32,7 @@ source:
 ✅5. dataset: RGBT-Tiny
 
 source:
-- paper: Visible-Thermal Tiny Object Detection: A Benchmark Dataset and Baselines(https://arxiv.org/abs/2406.14482)
+- paper: Visible-Thermal Tiny Object Detection: A Benchmark Dataset and Baselines(https://arxiv.org/pdf/2406.14482)
 - code: https://github.com/XinyiYing/RGBT-Tiny
 - download link: https://pan.baidu.com/s/1IVwZglXdkSTqmC1llPXG2w?pwd=h2t2
 
@@ -118,8 +118,124 @@ data feature: We only have thermal images for each object, without train/test sp
 
 ## RGBT-Tiny    
 This is a huge dataset with 115 different scenes.
+- DJI_0022_1: 130
+- DJI_0024_2: 160
+- DJI_0026_2: 440
+- DJI_0028_2: 370
+- DJI_0028_3: 570
+- DJI_0028_4: 590
+- DJI_0028_5: 590
+- DJI_0030_2: 590
+- DJI_0030_9: 590
+- DJI_0032_3: 290
+- DJI_0032_5: 350
+- DJI_0043_2: 380
+- DJI_0047_3: 310
+- DJI_0049_2: 90
+- DJI_0051_2: 580
+- DJI_0051_3: 600
+- DJI_0057_1: 560
+- DJI_0061_2: 240
+- DJI_0067_2: 500
+- DJI_0069_1: 420
+- DJI_0071_2: 590
+- DJI_0073_3: 360
+- DJI_0075_3: 240
+- DJI_0077_2: 360
+- DJI_0081_2: 350
+- DJI_0083_2: 560
+- DJI_0085_2: 320
+- DJI_0089_2: 300
+- DJI_0095_3: 280
+- DJI_0101_2: 120
+- DJI_0107_1: 70
+- DJI_0109_1: 90
+- DJI_0111_2: 180
+- DJI_0113_3: 330
+- DJI_0115_2: 290
+- DJI_0117_2: 240
+- DJI_0119_2: 180
+- DJI_0121_2: 350
+- DJI_0123_6: 310
+- DJI_0125_1: 440
+- DJI_0127_1: 500
+- DJI_0129_2: 590
+- DJI_0131_2: 550
+- DJI_0133_2: 130
+- DJI_0135_1: 260
+- DJI_0137_3: 290
+- DJI_0139_2: 400
+- DJI_0141_2: 410
+- DJI_0143_1: 430
+- DJI_0145_1: 280
+- DJI_0155_2: 410
+- DJI_0157_2: 470
+- DJI_0159_2: 250
+- DJI_0163_1: 470
+- DJI_0167_1: 550
+- DJI_0169_3: 290
+- DJI_0171_2: 400
+- DJI_0173_2: 450
+- DJI_0175_2: 450
+- DJI_0177_2: 360
+- DJI_0179_2: 340
+- DJI_0181_3: 320
+- DJI_0183_2: 350
+- DJI_0217_2: 380
+- DJI_0221_2: 590
+- DJI_0225_1: 329
+- DJI_0227_1: 390
+- DJI_0229_2: 480
+- DJI_0237_2: 410
+- DJI_0241_2: 510
+- DJI_0243_2: 340
+- DJI_0253_1: 1090
+- DJI_0253_2: 580
+- DJI_0253_3: 520
+- DJI_0255_1: 600
+- DJI_0257_2: 590
+- DJI_0257_5: 260
+- DJI_0265_1: 80
+- DJI_0271_2: 70
+- DJI_0273_1: 1213
+- DJI_0273_3: 290
+- DJI_0275_3: 449
+- DJI_0277_1: 550
+- DJI_0277_2: 366
+- DJI_0279_2: 386
+- DJI_0279_4: 274
+- DJI_0283_1: 450
+- DJI_0285_3: 182
+- DJI_0287_1: 273
+- DJI_0287_2: 490
+- DJI_0291_2: 153
+- DJI_0293_1: 363
+- DJI_0295_3: 550
+- DJI_0303_2: 577
+- DJI_0305_3: 333
+- DJI_0305_7: 340
+- DJI_0307_1: 250
+- DJI_0307_2: 180
+- DJI_0309_1: 432
+- DJI_0309_2: 598
+- DJI_0309_4: 603
+- DJI_0317_2: 600
+- DJI_0319_2: 598
+- DJI_0323_2: 593
+- DJI_0325_2: 595
+- DJI_0327_3: 390
+- DJI_0331_3: 360
+- DJI_0337_3: 598
+- DJI_0339_2: 600
+- DJI_0341_2: 600
+- DJI_0341_5: 314
+- DJI_0343_3: 591
+- DJI_0343_5: 281
+- DJI_0345_2: 600
+- DJI_0351_2: 200
 
 
+dataset feature: for each scene, images seem to be captured as different frames in a continuous video. It has both RGB and grayscale images.
 
 # set up dataset
 step 1: prepare dataset architecture
