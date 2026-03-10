@@ -40,7 +40,7 @@ def main():
         ],
         help="List of scene names to process.",
     )
-    
+
     parser.add_argument(
         "--image_type",
         type=str,

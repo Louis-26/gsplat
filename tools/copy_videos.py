@@ -2,18 +2,12 @@ import os
 import shutil
 
 # Define source and target directories for each object
-objects = [
-    "bicycle",
-    "bonsai",
-    "counter",
-    "garden",
-    "kitchen",
-    "room",
-    "stump"
-]
+objects = ["bicycle", "bonsai", "counter", "garden", "kitchen", "room", "stump"]
 
 base_source_dir = "/brtx/605-nvme2/ylu174/research/gsplat/examples/results/benchmark"
-base_target_dir = "/brtx/605-nvme2/ylu174/research/gsplat/render_result/original_example"
+base_target_dir = (
+    "/brtx/605-nvme2/ylu174/research/gsplat/render_result/original_example"
+)
 
 for obj in objects:
     source_dir = os.path.join(base_source_dir, obj, "videos")

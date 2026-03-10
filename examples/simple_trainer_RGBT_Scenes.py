@@ -356,7 +356,7 @@ class Runner:
             normalize=cfg.normalize_world_space,
             test_every=cfg.test_every,
             load_exposure=cfg.load_exposure,
-            image_type=cfg.image_type
+            image_type=cfg.image_type,
         )
         self.trainset = Dataset(
             self.parser,

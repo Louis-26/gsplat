@@ -66,7 +66,7 @@ class Parser:
         normalize: bool = False,
         test_every: int = 8,
         load_exposure: bool = False,
-        image_type: str = "rgb", # rgb or thermal
+        image_type: str = "rgb",  # rgb or thermal
     ):
         self.data_dir = data_dir
         self.factor = factor
