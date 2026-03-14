@@ -5,6 +5,7 @@
 Take a look at reference paper, ThermalGaussian: Thermal 3D Splatting, [here](https://arxiv.org/html/2409.07200v1)
 4. calibrate thermal camera, (whether the code exists), they will have different locations
 5. compare with paper rendering results, see this: , any new techniques?
+6. complete reading all paper listed in literature survey(12 in total)
 
 # Goal
 In building detection/drone area, better 3D reconstruction with thermal and RGB images 
@@ -24,6 +25,11 @@ not able to finish it at this stage, as I haven't got assigned to the AMD GPU se
 - finish reading the [reference paper](https://arxiv.org/pdf/2409.07200)
 - complete google slide for paper summary and **thermal camera calibration** [here](https://docs.google.com/presentation/d/1QQflCvNscf5a_RWNQV67Pe6kxKePz0vxd8gPLl5S4I8/edit?usp=sharing)
 - results comparison between ThermalGaussian paper and gsplat package benchmark experiment have been documented [here](../RGB-T-3DGS/RGBT-Scenes/result_comparison.md)
+
+## 6. complete reading all paper listed in literature survey✅
+- read all paper in literature review, and make google slides for part of them [here](https://drive.google.com/drive/folders/1L_ZnNMsvuvKp6-MrIVJetxDupzVP0wHm?usp=drive_link)
+
+
 
 # question & request
 ## paper
