@@ -25,6 +25,7 @@ not able to finish it at this stage, as I haven't got assigned to the AMD GPU se
 - finish reading the [reference paper](https://arxiv.org/pdf/2409.07200)
 - complete google slide for paper summary and **thermal camera calibration** [here](https://docs.google.com/presentation/d/1QQflCvNscf5a_RWNQV67Pe6kxKePz0vxd8gPLl5S4I8/edit?usp=sharing)
 - results comparison between ThermalGaussian paper and gsplat package benchmark experiment have been documented [here](../RGB-T-3DGS/RGBT-Scenes/result_comparison.md)
+- RGB-thermal camera calibration, finish my proposed method [here]
 
 ## 6. complete reading all paper listed in literature survey✅
 - read all paper in literature review, and make google slides for part of them [here](https://drive.google.com/drive/folders/1L_ZnNMsvuvKp6-MrIVJetxDupzVP0wHm?usp=drive_link)
@@ -33,11 +34,11 @@ not able to finish it at this stage, as I haven't got assigned to the AMD GPU se
 
 # question & request
 ## paper
-1. no definition for $\mathcal{L}_{seg}$ in GS4 paper   
+1. no definition for $\mathcal{L}_{seg}$ in GS4 paper✅(CE/mIoU)   
 ## other
-1. still not able to visualize .ply files, with cloudcompare installed
-2. visitor form still not received
-3. follow up with gpu server
+1. still not able to visualize .ply files, with cloudcompare installed✅
+2. visitor form still not received✅
+3. follow up with gpu server✅
 
 # potential next step
 1. reproduce ThermalGaussian paper results(containing the thermal camera calibration code, might need gpu)

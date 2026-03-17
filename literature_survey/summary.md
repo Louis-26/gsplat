@@ -4,13 +4,13 @@ classification:
 ⚙️ Thermal 3D reconstruction method
 📊 RGB/thermal image dataset
 
-⚙️1. ThermalGaussian: Thermal 3D Splatting. ✅
+⭐⚙️1. ThermalGaussian: Thermal 3D Splatting. ✅
 
 conference: ICLR 2025
 
 link: https://arxiv.org/pdf/2409.07200
 
-⚙️2. MMOne: Representing Multiple Modalities in One Scene. ✅
+⭐⚙️2. MMOne: Representing Multiple Modalities in One Scene. ✅
 explanation: Optimization-based thermal reconstruction – has nodes for 
 single-modal and multi-modal.
 
