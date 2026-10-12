@@ -11,10 +11,10 @@ permissions:
   contents: write
 
 jobs:
-  # Build the wheels using the reusable building workflow
+  # Build the wheels using the reusable building workflows
   build_wheels:
-    name: Call reusable building workflow
-    uses: ./.github/workflows/building.yml  
+    name: Call reusable building workflows
+    uses: ./.github/workflows/building.yml
 
   create_release_and_upload_packages:
     name: Upload to GitHub Release

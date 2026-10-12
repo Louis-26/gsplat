@@ -4,7 +4,7 @@ import argparse
 from jinja2 import Template
 import re
 
-# Automatically get the repository name in the format "owner/repo" from the GitHub workflow environment
+# Automatically get the repository name in the format "owner/repo" from the GitHub workflows environment
 GITHUB_REPO = os.getenv("GITHUB_REPOSITORY")
 
 
